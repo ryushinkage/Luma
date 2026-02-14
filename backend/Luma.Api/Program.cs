@@ -18,4 +18,10 @@ app.MapGet("/health", () =>
     return Results.Ok(new { status = "Luma API is running" });
 });
 
+app.MapGet("/api/v1/users/count", async (AppDbContext db) =>
+{
+    var count = await db.Users.CountAsync();
+    return Results.Ok(new { count });
+});
+
 app.Run();
