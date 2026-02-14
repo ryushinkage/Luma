@@ -3,6 +3,7 @@
 **/node_modules/
 **/.dart_tool/
 **/build/
+﻿**.idea/
 .env
 .env.*
 !.env.example
