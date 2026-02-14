@@ -1,9 +1,18 @@
-﻿**/bin/
+# Build folders
+**/bin/
 **/obj/
+
+# Node
 **/node_modules/
+
+# Flutter
 **/.dart_tool/
 **/build/
-﻿.idea/
+
+# IDE
+.idea/
+
+# Env files
 .env
 .env.*
 !.env.example
