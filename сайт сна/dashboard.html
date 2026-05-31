@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepAnalytics | Дашборд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+            </div>
+            <span>SleepAnalytics</span>
+        </div>
+                <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">Дашборд</a>
+                <a href="insights.html" class="nav-item">ШІ-інсайти</a>
+                <a href="habits.html" class="nav-item">Звички</a>
+                <a href="friends.html" class="nav-item">Друзі</a>
+                <a href="reports.html" class="nav-item">Звіти</a>
+                <a href="goals.html" class="nav-item">Цілі</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item">Налаштування</a>
+                <a href="index.html" class="nav-item text-red">Вийти</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="dashboard-header">
+                <h1>Огляд за тиждень</h1>
+                <div class="header-user">
+                    <button class="notification-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span class="indicator"></span>
+                    </button>
+                    <div class="user-avatar">О</div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                
+                <div class="dashboard-left">
+                    <div class="metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <div>
+                                    <p>Оцінка сну</p>
+                                    <h3>85</h3>
+                                </div>
+                                <div class="metric-icon purple-bg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C5CFF" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                            </div>
+                            <p class="metric-trend">+2 від вчора</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <div>
+                                    <p>Тривалість</p>
+                                    <h3>7г 42хв</h3>
+                                </div>
+                                <div class="metric-icon blue-bg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            </div>
+                            <p class="metric-trend">Оптимально</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <div>
+                                    <p>Відновлення</p>
+                                    <h3>92%</h3>
+                                </div>
+                                <div class="metric-icon green-bg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            </div>
+                            <p class="metric-trend">Готовність до тренувань</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <div>
+                                    <p>Дефіцит сну</p>
+                                    <h3>0г 30хв</h3>
+                                </div>
+                                <div class="metric-icon red-bg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B7A" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                            </div>
+                            <p class="metric-trend">-1г за тиждень</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <div>
+                                <h3>Фази сну за тиждень</h3>
+                                <p>Співвідношення глибокого, швидкого та легкого сну</p>
+                            </div>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="dot purple"></span>Глибокий</span>
+                                <span class="legend-item"><span class="dot blue"></span>Швидкий</span>
+                                <span class="legend-item"><span class="dot dark"></span>Легкий</span>
+                            </div>
+                        </div>
+                       <div class="chart-card">
+                        <div class="chart-header">
+                            <div>
+                                <h3>Фази сну за тиждень</h3>
+                                <p>Співвідношення глибокого, швидкого та легкого сну</p>
+                            </div>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="dot purple"></span>Глибокий</span>
+                                <span class="legend-item"><span class="dot blue"></span>Швидкий</span>
+                                <span class="legend-item"><span class="dot dark"></span>Легкий</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-placeholder placeholder-phases">
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 40%"></div>
+                                <div class="bar bar-blue" style="height: 30%"></div>
+                                <div class="bar bar-purple" style="height: 20%"></div>
+                                <span class="bar-label">Пн</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 50%"></div>
+                                <div class="bar bar-blue" style="height: 20%"></div>
+                                <div class="bar bar-purple" style="height: 15%"></div>
+                                <span class="bar-label">Вто</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 40%"></div>
+                                <div class="bar bar-blue" style="height: 35%"></div>
+                                <div class="bar bar-purple" style="height: 25%"></div>
+                                <span class="bar-label">Сер</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 35%"></div>
+                                <div class="bar bar-blue" style="height: 40%"></div>
+                                <div class="bar bar-purple" style="height: 30%"></div>
+                                <span class="bar-label">Чт</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 60%"></div>
+                                <div class="bar bar-blue" style="height: 20%"></div>
+                                <div class="bar bar-purple" style="height: 10%"></div>
+                                <span class="bar-label">Пт</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 30%"></div>
+                                <div class="bar bar-blue" style="height: 40%"></div>
+                                <div class="bar bar-purple" style="height: 30%"></div>
+                                <span class="bar-label">Сб</span>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar bar-light" style="height: 45%"></div>
+                                <div class="bar bar-blue" style="height: 25%"></div>
+                                <div class="bar bar-purple" style="height: 20%"></div>
+                                <span class="bar-label">Нд</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <div>
+                                <h3>Рівень відновлення</h3>
+                                <p>Динаміка вашої енергії протягом дня</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-placeholder placeholder-energy">
+                            <div class="energy-labels">
+                                <span>00:00</span>
+                                <span>04:00</span>
+                                <span>08:00</span>
+                                <span>12:00</span>
+                                <span>16:00</span>
+                                <span>20:00</span>
+                                <span>23:59</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-right">
+                    <div class="ai-panel">
+                        <div class="ai-header">
+                            <div class="ai-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                            </div>
+                            <h3>ШІ-Асистент</h3>
+                        </div>
+                        
+                        <div class="ai-insight">
+                            <p>Ваш циркадний ритм стабілізувався. Глибокий сон зріс завдяки регулярному відходу до сну о 22:30.</p>
+                        </div>
+                        <div class="ai-insight alert">
+                            <p class="text-white">Високий рівень стресу вчора ввечері призвів до затримки фази REM.</p>
+                            <p class="text-muted mt-2">Рекомендація: 15 хвилин медитації або читання перед сном сьогодні.</p>
+                        </div>
+
+                        <button class="btn btn-outline full-width mt-4">Згенерувати повний звіт</button>
+                    </div>
+
+                    <div class="behavior-panel mt-4">
+                        <h3>Поведінкові фактори</h3>
+                        
+                        <div class="factor-item">
+                            <div class="factor-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div>
+                            <div class="factor-text">
+                                <p class="factor-title">Кофеїн</p>
+                                <p class="factor-desc">Остання кава: 14:30</p>
+                            </div>
+                            <div class="status-dot green"></div>
+                        </div>
+
+                        <div class="factor-item">
+                            <div class="factor-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+                            <div class="factor-text">
+                                <p class="factor-title">Екранний час</p>
+                                <p class="factor-desc">Перед сном: 45 хв</p>
+                            </div>
+                            <div class="status-dot red"></div>
+                        </div>
+
+                        <div class="factor-item">
+                            <div class="factor-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></div>
+                            <div class="factor-text">
+                                <p class="factor-title">Активність</p>
+                                <p class="factor-desc">Тренування: 18:00</p>
+                            </div>
+                            <div class="status-dot green"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
