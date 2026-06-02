@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SleepAnalytics | Звички</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+            </div>
+            <span>SleepAnalytics</span>
+        </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Дашборд</a>
+                <a href="insights.html" class="nav-item">ШІ-інсайти</a>
+                <a href="habits.html" class="nav-item active">Звички</a>
+                <a href="friends.html" class="nav-item">Друзі</a>
+                <a href="reports.html" class="nav-item">Звіти</a>
+                <a href="goals.html" class="nav-item">Цілі</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item">Налаштування</a>
+                <a href="index.html" class="nav-item text-red">Вийти</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="dashboard-grid flex-col">
+                
+                <div class="habits-header-row">
+                    <div>
+                        <h2 class="page-title">Щоденні звички</h2>
+                        <p class="page-subtitle">Формуйте здоровий режим сну крок за кроком</p>
+                    </div>
+                    <button class="btn btn-purple">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        Нова звичка
+                    </button>
+                </div>
+
+                <div class="habits-stats-row">
+                    <div class="habit-stat-card">
+                        <div class="stat-icon bg-green-light"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <div>
+                            <p class="stat-label">Виконано сьогодні</p>
+                            <h3 class="stat-value">3 <span class="stat-total">/6</span></h3>
+                        </div>
+                    </div>
+                    <div class="habit-stat-card">
+                        <div class="stat-icon bg-purple-light"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C5CFF" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg></div>
+                        <div>
+                            <p class="stat-label">Відсоток виконання</p>
+                            <h3 class="stat-value">50%</h3>
+                        </div>
+                    </div>
+                    <div class="habit-stat-card">
+                        <div class="stat-icon bg-red-light"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B7A" stroke-width="2"><path d="M12 2l3 5h-2l3 5h-2l3 5H7l3-5H8l3-5H9l3-5z"/></svg></div>
+                        <div>
+                            <p class="stat-label">Найдовша серія</p>
+                            <h3 class="stat-value">12 <span class="stat-total">днів</span></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="habits-grid">
+                    
+                    <div class="habit-card">
+                        <div class="habit-top">
+                            <div class="habit-info">
+                                <div class="habit-icon">🚶</div>
+                                <div>
+                                    <h3 class="habit-title">Ранкова прогулянка</h3>
+                                    <p class="habit-desc">15 хвилин на свіжому повітрі після пробудження</p>
+                                </div>
+                            </div>
+                            <div class="habit-streak"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><path d="M12 2l3 5h-2l3 5h-2l3 5H7l3-5H8l3-5H9l3-5z"/></svg> 7</div>
+                        </div>
+                        <div class="habit-days">
+                            <div class="day-col"><span>Пн</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Вт</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Ср</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Чт</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Пт</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Сб</span><div class="day-box active-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Нд</span><div class="day-box empty"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="habit-card">
+                        <div class="habit-top">
+                            <div class="habit-info">
+                                <div class="habit-icon">☕</div>
+                                <div>
+                                    <h3 class="habit-title">Відмова від кофеїну</h3>
+                                    <p class="habit-desc">Уникати кави та енергетиків у другій половині дня</p>
+                                </div>
+                            </div>
+                            <div class="habit-streak"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><path d="M12 2l3 5h-2l3 5h-2l3 5H7l3-5H8l3-5H9l3-5z"/></svg> 12</div>
+                        </div>
+                        <div class="habit-days">
+                            <div class="day-col"><span>Пн</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Вт</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Ср</span><div class="day-box empty"></div></div>
+                            <div class="day-col"><span>Чт</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Пт</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Сб</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Нд</span><div class="day-box active-yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                        </div>
+                    </div>
+
+                    <div class="habit-card">
+                        <div class="habit-top">
+                            <div class="habit-info">
+                                <div class="habit-icon">📖</div>
+                                <div>
+                                    <h3 class="habit-title">Читання перед сном</h3>
+                                    <p class="habit-desc">20 хвилин читання паперової книги</p>
+                                </div>
+                            </div>
+                            <div class="habit-streak"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><path d="M12 2l3 5h-2l3 5h-2l3 5H7l3-5H8l3-5H9l3-5z"/></svg> 3</div>
+                        </div>
+                        <div class="habit-days">
+                            <div class="day-col"><span>Пн</span><div class="day-box empty"></div></div>
+                            <div class="day-col"><span>Вт</span><div class="day-box active-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Ср</span><div class="day-box active-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Чт</span><div class="day-box active-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Пт</span><div class="day-box empty"></div></div>
+                            <div class="day-col"><span>Сб</span><div class="day-box empty"></div></div>
+                            <div class="day-col"><span>Нд</span><div class="day-box empty"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="habit-card">
+                        <div class="habit-top">
+                            <div class="habit-info">
+                                <div class="habit-icon">📱</div>
+                                <div>
+                                    <h3 class="habit-title">Відключення гаджетів</h3>
+                                    <p class="habit-desc">Режим "Не турбувати" за 1 годину до сну</p>
+                                </div>
+                            </div>
+                            <div class="habit-streak"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><path d="M12 2l3 5h-2l3 5h-2l3 5H7l3-5H8l3-5H9l3-5z"/></svg> 9</div>
+                        </div>
+                        <div class="habit-days">
+                            <div class="day-col"><span>Пн</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Вт</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Ср</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Чт</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Пт</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Сб</span><div class="day-box active-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div></div>
+                            <div class="day-col"><span>Нд</span><div class="day-box empty"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="add-habit-card">
+                        <div class="add-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </div>
+                        <h3 class="add-title">Додати нову звичку</h3>
+                        <p class="add-desc">Створіть власний ритуал для кращого сну</p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
