@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepAnalytics | Розумний аналіз сну</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+            </div>
+            <span>SleepAnalytics</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Переваги</a>
+            <a href="#how-it-works">Як це працює</a>
+            <a href="#pricing">Тарифи</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="login-link">Увійти</a>
+            <a href="#" class="btn btn-primary btn-small open-register">Почати безкоштовно</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-blue"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M8 2L10 6L14 8L10 10L8 14L6 10L2 8L6 6L8 2Z"/></svg>
+                    Нове: ШІ-коучинг сну
+                </div>
+                <h1>Спіть краще.<br><span class="highlight">Відновлюйтесь розумніше.</span></h1>
+                <p class="description">Перша інтелектуальна платформа, яка аналізує якість вашого сну, відстежує довгострокові тренди та надає персоналізовані ШІ-рекомендації для ідеального відновлення.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary open-register">Почати безкоштовно</a>
+                    <a href="#" class="btn btn-secondary">Дивитись демо</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card main-card">
+                    <div class="card-header">
+                        <div class="stat">
+                            <span class="label">Оцінка сну</span>
+                            <span class="value score">85 <span class="small">/100</span></span>
+                        </div>
+                        <div class="stat right">
+                            <span class="label">Час сну</span>
+                            <span class="value">7г 42хв</span>
+                        </div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="icon-wrapper">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#7C5CFF"><path d="M10 3L12 7L16 9L12 11L10 15L8 11L4 9L8 7L10 3Z"/></svg>
+                        </div>
+                        <div class="insight-text">
+                            <h4>ШІ-Інсайт</h4>
+                            <p>Ваш глибокий сон збільшився на 15% після того, як ви перестали вживати кофеїн після 14:00. Продовжуйте в тому ж дусі для кращого відновлення.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Що робить платформа</h2>
+                <p>Повний набір інструментів для розуміння та покращення вашого сну за допомогою передових алгоритмів.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/></svg></div>
+                    <h3>Аналіз сну</h3>
+                    <p>Детальне розбиття фаз сну: швидкий (REM), глибокий та легкий сон.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <h3>ШІ-інсайти</h3>
+                    <p>Персоналізовані пояснення того, що саме впливає на якість вашого відпочинку.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                    <h3>Коучинг сну</h3>
+                    <p>Адаптивні рекомендації для формування здорових звичок.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg></div>
+                    <h3>Довгострокові тренди</h3>
+                    <p>Відстеження змін у вашому стані здоров'я місяцями та роками.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <h3>Трекінг відновлення</h3>
+                    <p>Оцінка готовності вашого тіла до фізичних та ментальних навантажень.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div>
+                    <h3>Поведінкова аналітика</h3>
+                    <p>Кореляція між вашими денними діями та нічним відновленням.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works section-darkest">
+        <div class="container how-container">
+            <div class="how-text">
+                <h2>Як це працює</h2>
+                <p>Ми перетворюємо складні дані з ваших носіїв на зрозумілі та дієві кроки для покращення життя.</p>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Збір даних</h3>
+                            <p>Синхронізація з вашими улюбленими пристроями та смарт-годинниками.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>ШІ-аналіз</h3>
+                            <p>Наша нейромережа шукає приховані патерни у ваших показниках здоров'я.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Персональні рекомендації</h3>
+                            <p>Отримуйте щоденні поради щодо часу сну та активності.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="how-visual">
+                <div class="how-card-container">
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">Рекомендований час сну</span>
+                            <span class="info-value">22:30 - 23:00</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B7A" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">Стрес-індикатор</span>
+                            <span class="info-value text-red">Підвищений сьогодні</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4DA8FF" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">ШІ Рекомендація</span>
+                            <span class="info-value text-small">Зменшіть освітлення за годину до сну. Ваш циркадний ритм зміщено.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Що ми аналізуємо</h2>
+                <p>Більше 20 параметрів вашого тіла та поведінки для створення повної картини відновлення.</p>
+            </div>
+            <div class="metrics-tags">
+                <span class="metric-tag">Тривалість сну</span>
+                <span class="metric-tag">Ефективність сну</span>
+                <span class="metric-tag">Фази (REM, Глибокий, Легкий)</span>
+                <span class="metric-tag">Регулярність</span>
+                <span class="metric-tag">Дефіцит сну</span>
+                <span class="metric-tag">Рівень стресу</span>
+                <span class="metric-tag">Пульс</span>
+                <span class="metric-tag">Рівень кисню (SpO₂)</span>
+                <span class="metric-tag">Екранний час</span>
+                <span class="metric-tag">Вживання кофеїну</span>
+                <span class="metric-tag">Рівень активності</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing section-darkest">
+        <div class="container">
+            <div class="section-header">
+                <h2>Прості тарифи</h2>
+                <p>Почніть аналізувати свій сон безкоштовно або отримайте максимум з преміум ШІ-функціями.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Базовий</h3>
+                    <div class="price">$0 <span>/міс</span></div>
+                    <ul class="features-list">
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6EE7B7" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Базові метрики сну</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6EE7B7" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Історія за 7 днів</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6EE7B7" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Прості графіки</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6EE7B7" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Інтеграція з 1 пристроєм</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary btn-full">Обрати Базовий</a>
+                </div>
+
+                <div class="price-card premium">
+                    <div class="popular-badge">ПОПУЛЯРНИЙ</div>
+                    <h3>Premium ШІ</h3>
+                    <div class="price">$12 <span>/міс</span></div>
+                    <ul class="features-list">
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Персональний ШІ-асистент</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Необмежена історія</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Кореляція звичок</li>
+                        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#4DA8FF" stroke-width="2"><path d="M5 10L8 13L15 6"/></svg> Розумні рекомендації</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full">Спробувати Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="integrations section-main">
+        <div class="container">
+            <h2>Інтегрується з вашими улюбленими пристроями</h2>
+            <div class="logos-row">
+                <span>GARMIN</span>
+                <span>APPLE HEALTH</span>
+                <span>GOOGLE FIT</span>
+                <span>FITBIT</span>
+                <span>OURA</span>
+                <span>WHOOP</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C5CFF" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                <span>SleepAnalytics</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Про нас</a>
+                <a href="#">Конфіденційність</a>
+                <a href="#">Умови</a>
+                <a href="#">Контакти</a>
+            </div>
+            <div class="copyright">© 2026 SleepAnalytics. Всі права захищено.</div>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal-overlay">
+        <div class="login-card">
+            <button class="close-btn" id="close-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="modal-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            
+            <h2 class="modal-title">З поверненням</h2>
+            <p class="modal-subtitle">Увійдіть, щоб продовжити покращувати свій сон</p>
+
+            <button class="google-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                Продовжити з Google
+            </button>
+
+            <div class="divider">
+                <span>АБО</span>
+            </div>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Увійти
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </form>
+
+            <div class="modal-footer">
+                Ще не маєте акаунта? <a href="#" id="switch-to-register">Зареєструватись</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal-overlay">
+        <div class="login-card">
+            <button class="close-btn" id="close-register">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="modal-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            
+            <h2 class="modal-title">Створити акаунт</h2>
+            <p class="modal-subtitle">Приєднуйтесь до платформи інтелектуального сну</p>
+
+            <button class="google-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                Продовжити з Google
+            </button>
+
+            <div class="divider">
+                <span>АБО</span>
+            </div>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B7C1D9" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Створити аккаунт
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </form>
+
+            <div class="modal-footer">
+                Вже маєте аккаунт? <a href="#" id="switch-to-login">Увійти</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
