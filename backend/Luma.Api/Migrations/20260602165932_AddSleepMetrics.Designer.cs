@@ -3,6 +3,7 @@ using System;
 using Luma.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Luma.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260602165932_AddSleepMetrics")]
+    partial class AddSleepMetrics
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,39 +24,6 @@ namespace Luma.Api.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("Luma.Api.Models.AIReport", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("GeneratedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Insights")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("PeriodEnd")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("PeriodStart")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AIReports");
-                });
 
             modelBuilder.Entity("Luma.Api.Models.JournalEntry", b =>
                 {
@@ -83,113 +53,6 @@ namespace Luma.Api.Migrations
                     b.HasIndex("UserId", "CreatedAtUtc");
 
                     b.ToTable("JournalEntries");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.NotificationSettings", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<bool>("PushEnabled")
-                        .HasColumnType("boolean");
-
-                    b.Property<TimeSpan>("ReminderTime")
-                        .HasColumnType("interval");
-
-                    b.Property<bool>("SmartRemindersEnabled")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("NotificationSettings");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.Recommendation", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Priority")
-                        .HasColumnType("integer");
-
-                    b.Property<Guid>("ReportId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReportId");
-
-                    b.ToTable("Recommendations");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.RecommendationRule", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Condition")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RecommendationRules");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.RiskIndicator", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Level")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("ReportId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("RiskType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReportId");
-
-                    b.ToTable("RiskIndicators");
                 });
 
             modelBuilder.Entity("Luma.Api.Models.SleepFactor", b =>
@@ -280,37 +143,9 @@ namespace Luma.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "SleepDate");
 
                     b.ToTable("SleepRecords");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.Subscription", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("ExpiresAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("PlanType")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("Subscriptions");
                 });
 
             modelBuilder.Entity("Luma.Api.Models.User", b =>
@@ -373,50 +208,6 @@ namespace Luma.Api.Migrations
                     b.ToTable("UserProfiles");
                 });
 
-            modelBuilder.Entity("Luma.Api.Models.AIReport", b =>
-                {
-                    b.HasOne("Luma.Api.Models.User", "User")
-                        .WithMany("AIReports")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.NotificationSettings", b =>
-                {
-                    b.HasOne("Luma.Api.Models.User", "User")
-                        .WithOne("NotificationSettings")
-                        .HasForeignKey("Luma.Api.Models.NotificationSettings", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.Recommendation", b =>
-                {
-                    b.HasOne("Luma.Api.Models.AIReport", "Report")
-                        .WithMany("Recommendations")
-                        .HasForeignKey("ReportId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Report");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.RiskIndicator", b =>
-                {
-                    b.HasOne("Luma.Api.Models.AIReport", "Report")
-                        .WithMany("RiskIndicators")
-                        .HasForeignKey("ReportId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Report");
-                });
-
             modelBuilder.Entity("Luma.Api.Models.SleepFactor", b =>
                 {
                     b.HasOne("Luma.Api.Models.SleepRecord", "SleepRecord")
@@ -450,17 +241,6 @@ namespace Luma.Api.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Luma.Api.Models.Subscription", b =>
-                {
-                    b.HasOne("Luma.Api.Models.User", "User")
-                        .WithOne("Subscription")
-                        .HasForeignKey("Luma.Api.Models.Subscription", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Luma.Api.Models.UserProfile", b =>
                 {
                     b.HasOne("Luma.Api.Models.User", "User")
@@ -470,13 +250,6 @@ namespace Luma.Api.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Luma.Api.Models.AIReport", b =>
-                {
-                    b.Navigation("Recommendations");
-
-                    b.Navigation("RiskIndicators");
                 });
 
             modelBuilder.Entity("Luma.Api.Models.SleepRecord", b =>
@@ -489,18 +262,10 @@ namespace Luma.Api.Migrations
 
             modelBuilder.Entity("Luma.Api.Models.User", b =>
                 {
-                    b.Navigation("AIReports");
-
-                    b.Navigation("NotificationSettings")
-                        .IsRequired();
-
                     b.Navigation("Profile")
                         .IsRequired();
 
                     b.Navigation("SleepRecords");
-
-                    b.Navigation("Subscription")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

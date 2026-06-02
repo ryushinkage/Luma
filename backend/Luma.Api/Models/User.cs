@@ -1,11 +1,19 @@
-namespace Luma.Api.Models;
+using System;
+using System.Collections.Generic; // Потрібно для ICollection
 
-public class User
+namespace Luma.Api.Models // Твій namespace може трохи відрізнятися
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-
-    public string Email { get; set; } = string.Empty;
-    public string DisplayName { get; set; } = string.Empty;
-
-    public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
+    public class User
+    {
+        public Guid Id { get; set; }
+        public string Email { get; set; }
+        public string DisplayName { get; set; }
+        public DateTime CreatedAtUtc { get; set; }
+        public string Role { get; set; } = "User";
+        public ICollection<SleepRecord> SleepRecords { get; set; } = new List<SleepRecord>();
+        public UserProfile Profile { get; set; }
+        public NotificationSettings NotificationSettings { get; set; }
+        public Subscription Subscription { get; set; }
+        public ICollection<AIReport> AIReports { get; set; } = new List<AIReport>();
+    }
 }
