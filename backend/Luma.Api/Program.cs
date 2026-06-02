@@ -12,12 +12,16 @@ Guid GetUserId(HttpContext http)
     return Guid.Parse("11111111-1111-1111-1111-111111111111");
 }
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+var connectionString = builder.Configuration.GetConnectionString("Default")
+                       ?? throw new InvalidOperationException("Connection string 'Default' not found.");
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    options.UseNpgsql(connectionString));
 
 
 var app = builder.Build();
@@ -106,5 +110,13 @@ app.MapGet("/api/v1/users/count", async (AppDbContext db) =>
     var count = await db.Users.CountAsync();
     return Results.Ok(new { count });
 });
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.EnsureCreated(); // Створює базу, якщо її немає
+    DbInitializer.Initialize(context); // Додає тестового юзера
+}
 
 app.Run();
