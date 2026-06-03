@@ -19,7 +19,6 @@ public class AppDbContext : DbContext
     public DbSet<Recommendation> Recommendations => Set<Recommendation>();
     public DbSet<RiskIndicator> RiskIndicators => Set<RiskIndicator>();
 
-    // ОСТАННЯ ТАБЛИЦЯ
     public DbSet<RecommendationRule> RecommendationRules => Set<RecommendationRule>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,7 +30,9 @@ public class AppDbContext : DbContext
             e.Property(x => x.Email).IsRequired().HasMaxLength(320);
             e.Property(x => x.DisplayName).IsRequired().HasMaxLength(200);
             e.Property(x => x.Role).IsRequired().HasMaxLength(50);
+            e.Property(x => x.PasswordHash).IsRequired().HasMaxLength(500);
 
+            e.HasMany(x => x.SleepRecords).WithOne(s => s.User).HasForeignKey(s => s.UserId).OnDelete(DeleteBehavior.Cascade);
             e.HasMany(x => x.SleepRecords).WithOne(s => s.User).HasForeignKey(s => s.UserId).OnDelete(DeleteBehavior.Cascade);
             e.HasOne(x => x.Profile).WithOne(p => p.User).HasForeignKey<UserProfile>(p => p.UserId).OnDelete(DeleteBehavior.Cascade);
             e.HasOne(x => x.NotificationSettings).WithOne(n => n.User).HasForeignKey<NotificationSettings>(n => n.UserId).OnDelete(DeleteBehavior.Cascade);
@@ -77,7 +78,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Recommendation>(e => { e.HasKey(x => x.Id); e.Property(x => x.Type).HasConversion<string>(); });
         modelBuilder.Entity<RiskIndicator>(e => { e.HasKey(x => x.Id); e.Property(x => x.Level).HasConversion<string>(); });
 
-        // Налаштування останньої таблиці
+
         modelBuilder.Entity<RecommendationRule>(e => { e.HasKey(x => x.Id); });
     }
 }
