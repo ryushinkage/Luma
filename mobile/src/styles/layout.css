@@ -1,0 +1,155 @@
+﻿.app-layout {
+    min-height: 100vh;
+    display: flex;
+    background: var(--bg-main);
+}
+
+.sidebar {
+    width: 256px;
+    min-height: 100vh;
+    background: var(--bg-dark);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar__logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebar__logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #060816;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+}
+
+.sidebar__nav {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar__link {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    background: transparent;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sidebar__link:hover,
+.sidebar__link.active {
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+.sidebar__bottom {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.sidebar__logout {
+    color: var(--red);
+    text-align: left;
+}
+
+.page {
+    flex: 1;
+    margin-left: 256px;
+    min-height: 100vh;
+}
+
+.header {
+    height: 72px;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(6, 8, 22, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    backdrop-filter: blur(10px);
+    z-index: 20;
+}
+
+.header h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-main);
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.header__icon span {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.header__avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: 700;
+
+    background: linear-gradient(
+            135deg,
+            var(--accent-purple),
+            var(--accent-blue)
+    );
+}
+
+.dashboard {
+    padding: 32px;
+}
