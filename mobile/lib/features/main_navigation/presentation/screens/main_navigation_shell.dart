@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../app/theme.dart';
 import '../../../../shared/presentation/widgets/shared_widgets.dart';
 import '../../../home/presentation/screens/home_screen.dart';
+import '../../../profile/data/repositories/mock_profile_repository.dart';
+import '../../../profile/presentation/controllers/profile_controller.dart';
+import '../../../profile/presentation/screens/profile_screen.dart';
 
 class MainNavigationShell extends StatefulWidget {
   const MainNavigationShell({super.key});
@@ -14,52 +17,57 @@ class MainNavigationShell extends StatefulWidget {
 class _MainNavigationShellState extends State<MainNavigationShell> {
   int _selectedIndex = 0;
 
-  static const _tabs = [
-    _NavigationTab(
-      label: 'Головна',
-      title: 'Огляд сну за день',
+  late final List<_NavigationTab> _tabs = [
+    const _NavigationTab(
+      label: 'Главная',
+      title: 'Обзор сна за день',
       description:
-          'Тут зʼявляться ваш головний sleep score, сигнал відновлення та наступна корисна дія.',
-      actionLabel: 'Додати запис сну',
+          'Здесь будет главный sleep score, сигнал восстановления и следующая полезная sleep-coaching задача.',
+      actionLabel: 'Добавить запись сна',
       icon: Icons.nights_stay_outlined,
       selectedIcon: Icons.nights_stay,
       screen: HomeScreen(),
     ),
-    _NavigationTab(
+    const _NavigationTab(
       label: 'Сон',
-      title: 'Записи сну',
+      title: 'Записи сна',
       description:
-          'Історія сну, швидке ручне додавання та деталі записів будуть у цьому розділі.',
-      actionLabel: 'Створити перший запис',
+          'История сна, быстрое ручное добавление и детали записей будут в этом разделе.',
+      actionLabel: 'Создать первую запись',
       icon: Icons.bedtime_outlined,
       selectedIcon: Icons.bedtime,
     ),
-    _NavigationTab(
-      label: 'Аналітика',
-      title: 'Аналітика сну',
+    const _NavigationTab(
+      label: 'Аналитика',
+      title: 'Аналитика сна',
       description:
-          'Тут будуть тренди, регулярність, відновлення та попередній перегляд кореляцій звичок.',
-      actionLabel: 'Переглянути тренди',
+          'Тренды, регулярность, восстановление и предварительный просмотр корреляций привычек появятся здесь.',
+      actionLabel: 'Посмотреть тренды',
       icon: Icons.insights_outlined,
       selectedIcon: Icons.insights,
     ),
-    _NavigationTab(
+    const _NavigationTab(
       label: 'AI-коуч',
-      title: 'AI-коуч зі сну',
+      title: 'AI-коуч сна',
       description:
-          'Wellness-рекомендації та тижневі підсумки коучингу зʼявляться після накопичення даних.',
-      actionLabel: 'Переглянути інсайти',
+          'Wellness-рекомендации и недельные итоги sleep-coaching появятся после накопления данных.',
+      actionLabel: 'Посмотреть инсайты',
       icon: Icons.auto_awesome_outlined,
       selectedIcon: Icons.auto_awesome,
     ),
     _NavigationTab(
-      label: 'Профіль',
-      title: 'Профіль і налаштування',
+      label: 'Профиль',
+      title: 'Профиль и настройки',
       description:
-          'Дані користувача, статус підписки, сповіщення та приватність будуть керуватися тут.',
-      actionLabel: 'Керувати профілем',
+          'Данные пользователя, статус подписки, уведомления и приватность управляются здесь.',
+      actionLabel: 'Открыть профиль',
       icon: Icons.person_outline,
       selectedIcon: Icons.person,
+      screen: ProfileScreen(
+        controller: ProfileController(
+          repository: const MockProfileRepository(),
+        ),
+      ),
     ),
   ];
 

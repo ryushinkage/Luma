@@ -1,0 +1,517 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="3">
+  <diagram id="statechart_sleep_analytics" name="Statechart Diagram">
+    <mxGraphModel dx="2060" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_state" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="Statechart Diagram — Sleep Analytics" vertex="1">
+          <mxGeometry height="40" width="650" x="430" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s_start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="755" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s_unauth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" value="Неавторизован" vertex="1">
+          <mxGeometry height="60" width="200" x="670" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s_oauth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Авторизація через OAuth" vertex="1">
+          <mxGeometry height="60" width="200" x="670" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="s_auth_error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" value="Помилка авторизації" vertex="1">
+          <mxGeometry height="60" width="200" x="1090" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="s_authorized" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="Авторизовано" vertex="1">
+          <mxGeometry height="60" width="200" x="670" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="s_dashboard" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" value="Головний екран" vertex="1">
+          <mxGeometry height="60" width="200" x="670" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="s_add_sleep" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Додати запис сну" vertex="1">
+          <mxGeometry height="60" width="220" x="350" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="s_validation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" value="Перевірка даних" vertex="1">
+          <mxGeometry height="60" width="220" x="350" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="s_val_error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" value="Помилка валідації" vertex="1">
+          <mxGeometry height="60" width="200" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="s_saved" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="Запис збережено" vertex="1">
+          <mxGeometry height="60" width="200" x="680" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="s_basic_calc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Розрахунок аналітики" vertex="1">
+          <mxGeometry height="60" width="220" x="670" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="s_basic_ready" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="Базова статистика готова" vertex="1">
+          <mxGeometry height="60" width="220" x="670" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="s_check_sub" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" value="Перевірка підписки" vertex="1">
+          <mxGeometry height="90" width="160" x="700" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="s_free" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" value="Free-режим" vertex="1">
+          <mxGeometry height="60" width="190" x="350" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="s_basic_view" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" value="Перегляд базової статистики" vertex="1">
+          <mxGeometry height="60" width="230" x="350" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_premium" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="Premium-режим" vertex="1">
+          <mxGeometry height="60" width="190" x="1010" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="AI-аналіз сну та трендів" vertex="1">
+          <mxGeometry height="60" width="230" x="990" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ai_report" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="AI-звіт готов" vertex="1">
+          <mxGeometry height="60" width="190" x="1010" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ai_error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" value="Помилка AI API" vertex="1">
+          <mxGeometry height="60" width="190" x="1310" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="s_ai_view" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" value="Просмотр AI-звіту" vertex="1">
+          <mxGeometry height="60" width="210" x="1010" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="s_plan" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" value="Виконання рекомендації" vertex="1">
+          <mxGeometry height="60" width="220" x="1010" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="s_logout" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" value="Вихід" vertex="1">
+          <mxGeometry height="60" width="160" x="980" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="se1" edge="1" parent="1" source="s_start" style="endArrow=block;html=1;rounded=0;" target="s_unauth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se2" edge="1" parent="1" source="s_unauth" style="endArrow=block;html=1;rounded=0;" target="s_oauth" value="Вхід через Google">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se3" edge="1" parent="1" source="s_oauth" style="endArrow=block;html=1;rounded=0;" target="s_authorized" value="OAuth успішно">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se4" edge="1" parent="1" source="s_oauth" style="endArrow=block;html=1;rounded=0;" target="s_auth_error" value="OAuth помилка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se5" edge="1" parent="1" source="s_auth_error" style="endArrow=block;html=1;rounded=0;" target="s_unauth" value="Повторити&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se6" edge="1" parent="1" source="s_authorized" style="endArrow=block;html=1;rounded=0;" target="s_dashboard" value="Открыть кабинет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se7" edge="1" parent="1" source="s_dashboard" style="endArrow=block;html=1;rounded=0;" target="s_add_sleep" value="Додати сон">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se8" edge="1" parent="1" source="s_add_sleep" style="endArrow=block;html=1;rounded=0;" target="s_validation" value="Зберегти">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se9" edge="1" parent="1" source="s_validation" style="endArrow=block;html=1;rounded=0;" target="s_val_error" value="Некоректні дані">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se10" edge="1" parent="1" source="s_val_error" style="endArrow=block;html=1;rounded=0;" target="s_add_sleep" value="Виправити">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se11" edge="1" parent="1" source="s_validation" style="endArrow=block;html=1;rounded=0;" target="s_saved" value="Дані скоректовані">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se12" edge="1" parent="1" source="s_saved" style="endArrow=block;html=1;rounded=0;" target="s_basic_calc" value="Обробка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se13" edge="1" parent="1" source="s_basic_calc" style="endArrow=block;html=1;rounded=0;" target="s_basic_ready" value="Графіки розраховано">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se14" edge="1" parent="1" source="s_basic_ready" style="endArrow=block;html=1;rounded=0;" target="s_check_sub" value="Запит розширеної аналітики">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se15" edge="1" parent="1" source="s_check_sub" style="endArrow=block;html=1;rounded=0;" target="s_free" value="Підписки нема">
+          <mxGeometry relative="1" x="-0.0005" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se16" edge="1" parent="1" source="s_free" style="endArrow=block;html=1;rounded=0;" target="s_basic_view" value="Показати базові графіки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se17" edge="1" parent="1" source="s_check_sub" style="endArrow=block;html=1;rounded=0;" target="s_premium" value="Premium активен">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se18" edge="1" parent="1" source="s_premium" style="endArrow=block;html=1;rounded=0;" target="s_ai" value="Передача даних">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se19" edge="1" parent="1" source="s_ai" style="endArrow=block;html=1;rounded=0;" target="s_ai_report" value="Рекоменації сформовані">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se20" edge="1" parent="1" source="s_ai" style="endArrow=block;html=1;rounded=0;" target="s_ai_error" value="Помилка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se21" edge="1" parent="1" source="s_ai_error" style="endArrow=block;html=1;rounded=0;" target="s_basic_view" value="Показать доступную аналитику">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1385" y="1190" />
+              <mxPoint x="1385" y="1240" />
+              <mxPoint x="465" y="1240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se22" edge="1" parent="1" source="s_ai_report" style="endArrow=block;html=1;rounded=0;" target="s_ai_view" value="ВІдкрити звіт">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se23" edge="1" parent="1" source="s_ai_view" style="endArrow=block;html=1;rounded=0;" target="s_plan" value="Прийняти план">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se24" edge="1" parent="1" source="s_plan" style="endArrow=block;html=1;rounded=0;" target="s_dashboard" value="Возврат">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1340" y="1460" />
+              <mxPoint x="1340" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se25" edge="1" parent="1" source="s_basic_view" style="endArrow=block;html=1;rounded=0;" target="s_dashboard" value="Повернення">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="230" y="1160" />
+              <mxPoint x="230" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="se26" edge="1" parent="1" source="s_dashboard" style="endArrow=block;html=1;rounded=0;" target="s_logout" value="Logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="se27" edge="1" parent="1" source="s_logout" style="endArrow=block;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="160" />
+            </Array>
+            <mxPoint x="1060" y="430" as="sourcePoint" />
+            <mxPoint x="870" y="159.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="component_sleep_analytics" name="Component Diagram">
+    <mxGraphModel dx="1084" dy="592" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_component" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="Component Diagram — Sleep Analytics" vertex="1">
+          <mxGeometry height="40" width="650" x="455" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=14;" value="Користувач" vertex="1">
+          <mxGeometry height="80" width="40" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=14;" value="Адміністратор" vertex="1">
+          <mxGeometry height="80" width="40" x="60" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_client" parent="1" style="swimlane;html=1;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=14;" value="Client Layer" vertex="1">
+          <mxGeometry height="560" width="300" x="180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="web_app" parent="pkg_client" style="shape=component;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="&lt;b&gt;Web App&lt;/b&gt;&lt;br&gt;React / Vite" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_app" parent="pkg_client" style="shape=component;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="&lt;b&gt;Mobile App&lt;/b&gt;&lt;br&gt;Flutter" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_panel" parent="pkg_client" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" value="&lt;b&gt;Admin Panel&lt;/b&gt;&lt;br&gt;Web Interface" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_backend" parent="1" style="swimlane;html=1;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=14;" value="Backend Layer — ASP.NET Core REST API" vertex="1">
+          <mxGeometry height="780" width="520" x="570" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Auth Module" vertex="1">
+          <mxGeometry height="55" width="190" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="profile_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="User Profile Module" vertex="1">
+          <mxGeometry height="55" width="190" x="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sleep_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Sleep Records Module" vertex="1">
+          <mxGeometry height="55" width="190" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Analytics Module" vertex="1">
+          <mxGeometry height="55" width="190" x="290" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="AI Assistant Module" vertex="1">
+          <mxGeometry height="55" width="190" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Subscription Module" vertex="1">
+          <mxGeometry height="55" width="190" x="290" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="notify_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Notification Module" vertex="1">
+          <mxGeometry height="55" width="190" x="40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Admin Management Module" vertex="1">
+          <mxGeometry height="55" width="190" x="290" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="export_module" parent="pkg_backend" style="shape=component;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=13;" value="Report Export Module" vertex="1">
+          <mxGeometry height="55" width="190" x="165" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="ce14" edge="1" parent="pkg_backend" style="endArrow=block;html=1;" value="Підписка">
+          <mxGeometry relative="1" x="-0.0019" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-140" y="240.00000000000003" as="sourcePoint" />
+            <mxPoint x="290" y="255.48000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kjG8UU6B6uVJd4DgQKSY-5" connectable="0" parent="ce14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.5537" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" value="PostgreSQL Database" vertex="1">
+          <mxGeometry height="90" width="260" x="690" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="google_oauth" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Google OAuth" vertex="1">
+          <mxGeometry height="90" width="220" x="1230" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_api" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="AI API" vertex="1">
+          <mxGeometry height="90" width="220" x="1230" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="paypal_api" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="PayPal API" vertex="1">
+          <mxGeometry height="90" width="220" x="1230" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="push_service" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Push Notification Service&lt;br&gt;FCM / APNs" vertex="1">
+          <mxGeometry height="90" width="220" x="1230" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="ce1" edge="1" parent="1" source="actor_user" style="endArrow=block;html=1;" target="web_app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce2" edge="1" parent="1" source="actor_user" style="endArrow=block;html=1;" target="mobile_app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce3" edge="1" parent="1" source="actor_admin" style="endArrow=block;html=1;" target="admin_panel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce4" edge="1" parent="1" source="web_app" style="endArrow=block;html=1;" target="auth_module" value="Login / OAuth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce5" edge="1" parent="1" source="mobile_app" style="endArrow=block;html=1;" target="auth_module" value="Login / OAuth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce6" edge="1" parent="1" source="admin_panel" style="endArrow=block;html=1;" target="auth_module" value="Admin login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce7" edge="1" parent="1" source="web_app" style="endArrow=block;html=1;" target="sleep_module" value="CRUD записи сну">
+          <mxGeometry relative="1" x="-0.0039" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ce8" edge="1" parent="1" source="mobile_app" style="endArrow=block;html=1;" target="sleep_module" value="Швидке додавання">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce9" edge="1" parent="1" source="web_app" style="endArrow=block;html=1;" target="analytics_module" value="Графики / статистика">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce10" edge="1" parent="1" source="mobile_app" style="endArrow=block;html=1;" target="analytics_module" value="Статистика">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce11" edge="1" parent="1" source="web_app" style="endArrow=block;html=1;" target="ai_module" value="AI-отчеты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce12" edge="1" parent="1" source="mobile_app" style="endArrow=block;html=1;" target="ai_module" value="Рекомендації">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce13" edge="1" parent="1" source="web_app" style="endArrow=block;html=1;" target="sub_module" value="Premium-доступ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce15" edge="1" parent="1" source="admin_panel" style="endArrow=block;html=1;" target="admin_module" value="Управління системою">
+          <mxGeometry relative="1" x="-0.0012" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ce16" edge="1" parent="1" source="auth_module" style="endArrow=block;html=1;" target="google_oauth" value="Проверка OAuth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce17" edge="1" parent="1" source="ai_module" style="endArrow=block;html=1;" target="ai_api" value="Генерация рекомендаций">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce18" edge="1" parent="1" source="sub_module" style="endArrow=block;html=1;" target="paypal_api" value="Оплата підписки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce19" edge="1" parent="1" source="notify_module" style="endArrow=block;html=1;" target="push_service" value="Push-нагадуання">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce20" edge="1" parent="1" source="auth_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce21" edge="1" parent="1" source="profile_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce22" edge="1" parent="1" source="sleep_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce23" edge="1" parent="1" source="analytics_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce24" edge="1" parent="1" source="ai_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce25" edge="1" parent="1" source="sub_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce26" edge="1" parent="1" source="notify_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce27" edge="1" parent="1" source="admin_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce28" edge="1" parent="1" source="export_module" style="endArrow=block;html=1;dashed=1;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="deployment_sleep_analytics" name="Deployment Diagram">
+    <mxGraphModel dx="1288" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_deploy" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="Deployment Diagram — Sleep Analytics" vertex="1">
+          <mxGeometry height="40" width="650" x="455" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="node_user" parent="1" style="shape=folder;tabWidth=100;tabHeight=30;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="User Device" vertex="1">
+          <mxGeometry height="220" width="270" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="browser" parent="node_user" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;" value="Web Browser" vertex="1">
+          <mxGeometry height="50" width="180" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_client" parent="node_user" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=13;" value="Mobile App&lt;br&gt;Flutter" vertex="1">
+          <mxGeometry height="50" width="180" x="45" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node_admin" parent="1" style="shape=folder;tabWidth=100;tabHeight=30;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=14;" value="Admin Device" vertex="1">
+          <mxGeometry height="150" width="270" x="80" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_browser" parent="node_admin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=13;" value="Admin Browser" vertex="1">
+          <mxGeometry height="50" width="180" x="45" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="node_front" parent="1" style="shape=folder;tabWidth=140;tabHeight=30;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=14;" value="Frontend Hosting" vertex="1">
+          <mxGeometry height="280" width="300" x="470" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="web_build" parent="node_front" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" value="Web Application&lt;br&gt;React / Vite Build" vertex="1">
+          <mxGeometry height="60" width="190" x="55" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_build" parent="node_front" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;" value="Admin Panel Build" vertex="1">
+          <mxGeometry height="60" width="190" x="55" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="node_app" parent="1" style="shape=folder;tabWidth=150;tabHeight=30;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=14;" value="Application Server" vertex="1">
+          <mxGeometry height="620" width="420" x="840" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="backend_api" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="ASP.NET Core REST API" vertex="1">
+          <mxGeometry height="55" width="210" x="110" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Auth Service" vertex="1">
+          <mxGeometry height="45" width="150" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sleep_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Sleep Data Service" vertex="1">
+          <mxGeometry height="45" width="150" x="230" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Analytics Service" vertex="1">
+          <mxGeometry height="45" width="150" x="40" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="AI Assistant Service" vertex="1">
+          <mxGeometry height="45" width="150" x="230" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="payment_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Subscription Service" vertex="1">
+          <mxGeometry height="45" width="150" x="10" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="notification_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Notification Service" vertex="1">
+          <mxGeometry height="45" width="150" x="285" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_service" parent="node_app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=12;" value="Admin Service" vertex="1">
+          <mxGeometry height="45" width="150" x="135" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="node_db" parent="1" style="shape=folder;tabWidth=210;tabHeight=30;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="Database Server — PostgreSQL" vertex="1">
+          <mxGeometry height="230" width="500" x="800" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="db_tables" parent="node_db" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=20;" value="Users&lt;br&gt;Sleep Records&lt;br&gt;Analytics Results&lt;br&gt;AI Reports&lt;br&gt;Subscriptions&lt;br&gt;Admin Data" vertex="1">
+          <mxGeometry height="130" width="360" x="70" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud_google" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Google Cloud&lt;br&gt;Google OAuth Service" vertex="1">
+          <mxGeometry height="90" width="210" x="1350" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud_ai" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="AI Provider&lt;br&gt;AI API" vertex="1">
+          <mxGeometry height="90" width="210" x="1350" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud_payment" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Payment Provider&lt;br&gt;PayPal API" vertex="1">
+          <mxGeometry height="90" width="210" x="1350" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud_push" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Push Infrastructure&lt;br&gt;FCM / APNs" vertex="1">
+          <mxGeometry height="90" width="210" x="1350" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="de1" edge="1" parent="1" source="browser" style="endArrow=block;html=1;" target="web_build" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de2" edge="1" parent="1" source="mobile_client" style="endArrow=block;html=1;" target="backend_api" value="HTTPS / REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de3" edge="1" parent="1" source="admin_browser" style="endArrow=block;html=1;" target="admin_build" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de4" edge="1" parent="1" source="web_build" style="endArrow=block;html=1;" target="backend_api" value="HTTPS / REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de5" edge="1" parent="1" source="admin_build" style="endArrow=block;html=1;" target="backend_api" value="HTTPS / REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de6" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="auth_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de7" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="sleep_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de8" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="analytics_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de9" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="ai_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de10" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="payment_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de11" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="notification_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de12" edge="1" parent="1" source="backend_api" style="endArrow=block;html=1;" target="admin_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="unH9TBFTJxAkl3VAH6yo-1" connectable="0" parent="de12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="0.4238" y="-3" as="geometry">
+            <mxPoint x="271" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="de13" edge="1" parent="1" source="auth_service" style="endArrow=block;html=1;" target="cloud_google" value="OAuth 2.0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de14" edge="1" parent="1" source="ai_service" style="endArrow=block;html=1;" target="cloud_ai" value="HTTPS API request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de15" edge="1" parent="1" source="payment_service" style="endArrow=block;html=1;" target="cloud_payment" value="Payment request">
+          <mxGeometry relative="1" x="-0.2712" y="-13" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="de16" edge="1" parent="1" source="notification_service" style="endArrow=block;html=1;" target="cloud_push" value="Push notifications">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de17" edge="1" parent="1" source="auth_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de18" edge="1" parent="1" source="sleep_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de19" edge="1" parent="1" source="analytics_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de20" edge="1" parent="1" source="ai_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de21" edge="1" parent="1" source="payment_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="de22" edge="1" parent="1" source="admin_service" style="endArrow=block;html=1;dashed=1;" target="node_db" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

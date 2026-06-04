@@ -1,0 +1,554 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="3">
+  <diagram id="e79627f3-d5d6-438a-9daf-2efdfe5c67ef" name="1. Smart Use Case Diagram">
+    <mxGraphModel dx="1873" dy="2272" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uc_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" value="Smart Use Case Diagram: Sleep Analytics" vertex="1">
+          <mxGeometry height="40" width="900" x="450" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="Користувач" vertex="1">
+          <mxGeometry height="120" width="80" x="80" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="Адміністратор" vertex="1">
+          <mxGeometry height="120" width="80" x="920" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_google" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="Google OAuth" vertex="1">
+          <mxGeometry height="120" width="80" x="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_payment" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="Платіжна система&lt;br&gt;PayPal/Monobank" vertex="1">
+          <mxGeometry height="120" width="80" x="1500" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_ai" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="AI API" vertex="1">
+          <mxGeometry height="120" width="80" x="1280" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_push" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" value="Push Notification&lt;br&gt;Service" vertex="1">
+          <mxGeometry height="120" width="80" x="1300" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Реєстрація / вхід&lt;br&gt;через Google" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Profile" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Керування&lt;br&gt;профілем" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AddSleep" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Додавання запису&lt;br&gt;про сон" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_EditSleep" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Редагування / видалення&lt;br&gt;запису про сон" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Factors" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Ведення щоденника&lt;br&gt;факторів" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_BasicMetrics" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Перегляд базових&lt;br&gt;метрик за день" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Charts" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Перегляд графіків&lt;br&gt;сну" vertex="1">
+          <mxGeometry height="70" width="190" x="350" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Trends" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Перегляд трендів&lt;br&gt;тиждень / місяць" vertex="1">
+          <mxGeometry height="70" width="190" x="760" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Compare" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Порівняння&lt;br&gt;періодів" vertex="1">
+          <mxGeometry height="70" width="190" x="640" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AdvancedAnalytics" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Аналіз sleep debt,&lt;br&gt;регулярності та ефективності" vertex="1">
+          <mxGeometry height="70" width="190" x="640" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AIReport" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Отримання&lt;br&gt;AI-звіту" vertex="1">
+          <mxGeometry height="70" width="190" x="640" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AIAssistant" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Спілкування з&lt;br&gt;AI-асистентом" vertex="1">
+          <mxGeometry height="70" width="190" x="640" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Plan" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Персональний план&lt;br&gt;покращення сну" vertex="1">
+          <mxGeometry height="70" width="190" x="640" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_RiskScreening" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Скринінг ризиків&lt;br&gt;та попередження" vertex="1">
+          <mxGeometry height="70" width="190" x="490" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Subscribe" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Оформлення Premium&lt;br&gt;підписки" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Export" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Експорт&lt;br&gt;звіту" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Reminders" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Smart-нагадування&lt;br&gt;та цілі" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AnalyzeSleep" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Аналіз&lt;br&gt;даних сну" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Correlations" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Кореляції&lt;br&gt;звички — якість сну" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_Recommendations" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Генерація&lt;br&gt;рекомендацій" vertex="1">
+          <mxGeometry height="70" width="190" x="970" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AdminUsers" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="Керування&lt;br&gt;користувачами" vertex="1">
+          <mxGeometry height="70" width="190" x="1080" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AdminSubs" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="Керування&lt;br&gt;підписками" vertex="1">
+          <mxGeometry height="70" width="190" x="1080" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AdminRules" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="Керування правилами&lt;br&gt;рекомендацій" vertex="1">
+          <mxGeometry height="70" width="190" x="1290" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="UC_AdminAnalytics" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="Аналітика&lt;br&gt;сервісу" vertex="1">
+          <mxGeometry height="70" width="190" x="1290" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Login" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Profile" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Profile" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_AddSleep" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AddSleep" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_EditSleep" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_EditSleep" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Factors" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Factors" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_BasicMetrics" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_BasicMetrics" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Charts" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Charts" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Trends" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Trends" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Compare" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Compare" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_AIReport" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AIReport" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_AIAssistant" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AIAssistant" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Subscribe" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Subscribe" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Reminders" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Reminders" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_UC_Export" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Export" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_admin_UC_AdminUsers" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AdminUsers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_admin_UC_AdminSubs" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AdminSubs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_admin_UC_AdminRules" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AdminRules" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_admin_UC_AdminAnalytics" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AdminAnalytics" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_google_login" edge="1" parent="1" source="actor_google" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_payment_sub" edge="1" parent="1" source="actor_payment" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Subscribe" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ai_report" edge="1" parent="1" source="actor_ai" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AIReport" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ai_assist" edge="1" parent="1" source="actor_ai" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_AIAssistant" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_push_rem" edge="1" parent="1" source="actor_push" style="endArrow=none;html=1;rounded=0;strokeWidth=1;" target="UC_Reminders" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AIReport_UC_AnalyzeSleep" edge="1" parent="1" source="UC_AIReport" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_AnalyzeSleep" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AIReport_UC_Correlations" edge="1" parent="1" source="UC_AIReport" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_Correlations" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AIReport_UC_Recommendations" edge="1" parent="1" source="UC_AIReport" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_Recommendations" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AIReport_UC_RiskScreening" edge="1" parent="1" source="UC_AIReport" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_RiskScreening" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AIAssistant_UC_Plan" edge="1" parent="1" source="UC_AIAssistant" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_Plan" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_Plan_UC_Recommendations" edge="1" parent="1" source="UC_Plan" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_Recommendations" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_Trends_UC_AdvancedAnalytics" edge="1" parent="1" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="UC_AdvancedAnalytics" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900.1909216854449" y="189.9973905020073" as="sourcePoint" />
+            <mxPoint x="816.0022436539602" y="351.25202529330375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inc_UC_Compare_UC_AdvancedAnalytics" edge="1" parent="1" source="UC_Compare" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_AdvancedAnalytics" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_UC_AdminRules_UC_Recommendations" edge="1" parent="1" source="UC_AdminRules" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#666666;" target="UC_Recommendations" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_UC_AIReport_sub" edge="1" parent="1" source="UC_AIReport" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#b85450;" target="UC_Subscribe" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_UC_AIAssistant_sub" edge="1" parent="1" source="UC_AIAssistant" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#b85450;" target="UC_Subscribe" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_UC_Export_sub" edge="1" parent="1" source="UC_Export" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;strokeColor=#b85450;" target="UC_Subscribe" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="009121ed-b967-4a10-bcd5-bd293a6f44d1" name="3. Class Diagram">
+    <mxGraphModel dx="1585" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="class_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" value="Class Diagram: Sleep Analytics" vertex="1">
+          <mxGeometry height="40" width="900" x="450" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_User" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+String email&lt;br&gt;+String name&lt;br&gt;+UserRole role&lt;br&gt;+DateTime createdAt&lt;hr&gt;+loginWithGoogle()&lt;br&gt;+updateProfile()" vertex="1">
+          <mxGeometry height="180" width="250" x="80" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_UserProfile" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;UserProfile&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID userId&lt;br&gt;+String sleepGoal&lt;br&gt;+Time preferredSleepTime&lt;br&gt;+Time preferredWakeTime&lt;hr&gt;+updateSettings()" vertex="1">
+          <mxGeometry height="180" width="270" x="390" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_Subscription" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;Subscription&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID userId&lt;br&gt;+PlanType planType&lt;br&gt;+SubscriptionStatus status&lt;br&gt;+DateTime expiresAt&lt;hr&gt;+isPremium()" vertex="1">
+          <mxGeometry height="180" width="270" x="720" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_NotificationSettings" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;NotificationSettings&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID userId&lt;br&gt;+Boolean pushEnabled&lt;br&gt;+Time reminderTime&lt;br&gt;+Boolean smartRemindersEnabled&lt;hr&gt;+updateSettings()" vertex="1">
+          <mxGeometry height="180" width="310" x="1050" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_SleepRecord" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;SleepRecord&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID userId&lt;br&gt;+Date sleepDate&lt;br&gt;+DateTime sleepStart&lt;br&gt;+DateTime sleepEnd&lt;br&gt;+Integer durationMinutes&lt;br&gt;+Float sleepEfficiency&lt;hr&gt;+create()&lt;br&gt;+update()&lt;br&gt;+delete()" vertex="1">
+          <mxGeometry height="235" width="300" x="80" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_SleepFactor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;SleepFactor&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID sleepRecordId&lt;br&gt;+Boolean caffeine&lt;br&gt;+Integer stressLevel&lt;br&gt;+Integer screenTimeMinutes&lt;br&gt;+Integer physicalActivityMinutes&lt;br&gt;+String notes&lt;hr&gt;" vertex="1">
+          <mxGeometry height="210" width="300" x="450" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_SleepMetric" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;SleepMetric&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID sleepRecordId&lt;br&gt;+Float regularityScore&lt;br&gt;+Integer sleepDebtMinutes&lt;br&gt;+Float qualityScore&lt;br&gt;+Float efficiencyScore&lt;hr&gt;" vertex="1">
+          <mxGeometry height="190" width="300" x="810" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_AnalyticsService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;AnalyticsService&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+calculateDailyMetrics()&lt;br&gt;+calculateWeeklyTrends()&lt;br&gt;+calculateMonthlyTrends()&lt;br&gt;+comparePeriods()&lt;br&gt;+calculateSleepDebt()" vertex="1">
+          <mxGeometry height="185" width="300" x="80" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_CorrelationAnalyzer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;CorrelationAnalyzer&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+findHabitImpact()&lt;br&gt;+calculateCorrelations()" vertex="1">
+          <mxGeometry height="135" width="300" x="450" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_Dashboard" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;Dashboard&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+showDailyMetrics()&lt;br&gt;+showCharts()&lt;br&gt;+showTrends()&lt;br&gt;+showAIReports()" vertex="1">
+          <mxGeometry height="160" width="300" x="810" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_AIReport" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;AIReport&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID userId&lt;br&gt;+Date periodStart&lt;br&gt;+Date periodEnd&lt;br&gt;+String summary&lt;br&gt;+String insights&lt;br&gt;+DateTime generatedAt&lt;hr&gt;" vertex="1">
+          <mxGeometry height="215" width="300" x="1180" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_Recommendation" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;Recommendation&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID reportId&lt;br&gt;+String title&lt;br&gt;+String description&lt;br&gt;+RecommendationType type&lt;br&gt;+Integer priority&lt;hr&gt;" vertex="1">
+          <mxGeometry height="200" width="300" x="1520" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_RiskIndicator" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;RiskIndicator&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+UUID reportId&lt;br&gt;+String riskType&lt;br&gt;+String description&lt;br&gt;+RiskLevel level&lt;hr&gt;" vertex="1">
+          <mxGeometry height="170" width="300" x="1520" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_AIService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;AIService&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+generateReport()&lt;br&gt;+generateRecommendations()&lt;br&gt;+analyzeRiskIndicators()&lt;br&gt;+createSleepImprovementPlan()" vertex="1">
+          <mxGeometry height="160" width="300" x="1180" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_PaymentService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;PaymentService&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+createPayment()&lt;br&gt;+verifyPayment()&lt;br&gt;+cancelSubscription()" vertex="1">
+          <mxGeometry height="130" width="270" x="720" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_NotificationService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;NotificationService&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;+sendReminder()&lt;br&gt;+generateSmartReminder()" vertex="1">
+          <mxGeometry height="120" width="310" x="1050" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_Admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;Admin&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+String email&lt;hr&gt;+manageUsers()&lt;br&gt;+manageSubscriptions()&lt;br&gt;+manageRecommendationRules()&lt;br&gt;+viewServiceAnalytics()" vertex="1">
+          <mxGeometry height="170" width="300" x="80" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_RecommendationRule" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;b&gt;RecommendationRule&lt;/b&gt;&lt;hr&gt;+UUID id&lt;br&gt;+String condition&lt;br&gt;+String action&lt;br&gt;+Boolean active&lt;hr&gt;+updateRule()" vertex="1">
+          <mxGeometry height="155" width="300" x="450" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_enums" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left;verticalAlign=top;spacing=6;dashed=1;" value="&lt;b&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;Enums&lt;/b&gt;&lt;hr&gt;UserRole: USER, ADMIN&lt;br&gt;PlanType: FREE, PREMIUM&lt;br&gt;SubscriptionStatus: ACTIVE, EXPIRED, CANCELLED&lt;br&gt;RiskLevel: LOW, MEDIUM, HIGH&lt;br&gt;RecommendationType: SLEEP_MODE, HABIT, STRESS, ACTIVITY" vertex="1">
+          <mxGeometry height="145" width="640" x="1240" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_assoc_0" edge="1" parent="1" source="cl_User" style="endArrow=none;html=1;rounded=0;" target="cl_UserProfile" value="1 — 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_1" edge="1" parent="1" source="cl_User" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cl_Subscription" value="1 — 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="310" />
+              <mxPoint x="855" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_2" edge="1" parent="1" source="cl_User" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" value="1 — 1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="225" />
+              <mxPoint x="360" y="320" />
+              <mxPoint x="1090" y="320" />
+            </Array>
+            <mxPoint x="330" y="305" as="sourcePoint" />
+            <mxPoint x="1090" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_3" edge="1" parent="1" source="cl_User" style="endArrow=none;html=1;rounded=0;exitX=0.573;exitY=1.019;exitDx=0;exitDy=0;exitPerimeter=0;" target="cl_SleepRecord" value="1 — many">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_assoc_4" edge="1" parent="1" source="cl_SleepRecord" style="endArrow=none;html=1;rounded=0;" target="cl_SleepFactor" value="1 — many">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_assoc_5" edge="1" parent="1" source="cl_SleepRecord" style="endArrow=none;html=1;rounded=0;" target="cl_SleepMetric" value="1 — 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_assoc_6" edge="1" parent="1" source="cl_User" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cl_AIReport" value="1 — many">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="340" />
+              <mxPoint x="1330" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_7" edge="1" parent="1" source="cl_AIReport" style="endArrow=none;html=1;rounded=0;" target="cl_Recommendation" value="1 — many">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_assoc_8" edge="1" parent="1" source="cl_AIReport" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cl_RiskIndicator" value="1 — many">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_9" edge="1" parent="1" source="cl_Admin" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cl_User" value="manages">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="1140" />
+              <mxPoint x="410" y="675" />
+              <mxPoint x="400" y="675" />
+              <mxPoint x="400" y="290" />
+              <mxPoint x="380" y="290" />
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_10" edge="1" parent="1" source="cl_Admin" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="cl_Subscription" value="manages">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="910" />
+              <mxPoint x="790" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_assoc_11" edge="1" parent="1" source="cl_Admin" style="endArrow=none;html=1;rounded=0;" target="cl_RecommendationRule" value="manages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_dep_0" edge="1" parent="1" source="cl_AnalyticsService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;" target="cl_SleepRecord" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_dep_1" edge="1" parent="1" source="cl_AnalyticsService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_SleepMetric" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="620" />
+              <mxPoint x="960" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_2" edge="1" parent="1" source="cl_AnalyticsService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_Dashboard" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="660" />
+              <mxPoint x="960" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_3" edge="1" parent="1" source="cl_CorrelationAnalyzer" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;" target="cl_SleepFactor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_dep_4" edge="1" parent="1" source="cl_CorrelationAnalyzer" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_SleepMetric" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="640" />
+              <mxPoint x="960" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_5" edge="1" parent="1" source="cl_AIService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;" target="cl_AIReport" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_dep_6" edge="1" parent="1" source="cl_AIService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_Recommendation" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="600" />
+              <mxPoint x="1670" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_7" edge="1" parent="1" source="cl_AIService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;" target="cl_RiskIndicator" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_dep_8" edge="1" parent="1" source="cl_AIService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_CorrelationAnalyzer" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="890" />
+              <mxPoint x="600" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_9" edge="1" parent="1" source="cl_Subscription" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_PaymentService" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="610" />
+              <mxPoint x="780" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_10" edge="1" parent="1" source="cl_NotificationService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_NotificationSettings" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="600" />
+              <mxPoint x="1140" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_11" edge="1" parent="1" source="cl_NotificationService" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_User" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="880" />
+              <mxPoint x="430" y="880" />
+              <mxPoint x="430" y="290" />
+              <mxPoint x="370" y="290" />
+              <mxPoint x="370" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_12" edge="1" parent="1" source="cl_Dashboard" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_AIReport" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1150" y="740" />
+              <mxPoint x="1150" y="467" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_13" edge="1" parent="1" source="cl_RecommendationRule" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_AIService" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="900" />
+              <mxPoint x="1330" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cl_dep_14" edge="1" parent="1" source="cl_RecommendationRule" style="endArrow=open;dashed=1;html=1;rounded=0;strokeColor=#666666;edgeStyle=orthogonalEdgeStyle;" target="cl_RiskIndicator" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="1070" />
+              <mxPoint x="1670" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="4b2b5e73-39f5-407c-a2f3-db9dce5a1dc2" name="4. Object Diagram">
+    <mxGraphModel dx="1717" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="obj_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" value="Object Diagram" vertex="1">
+          <mxGeometry height="40" width="900" x="280" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_user1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;user1: User&lt;/u&gt;&lt;hr&gt;id = &quot;u-001&quot;&lt;br&gt;email = &quot;anna@example.com&quot;&lt;br&gt;name = &quot;Anna&quot;&lt;br&gt;role = USER" vertex="1">
+          <mxGeometry height="145" width="260" x="80" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_profile1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;profile1: UserProfile&lt;/u&gt;&lt;hr&gt;id = &quot;p-001&quot;&lt;br&gt;sleepGoal = &quot;Покращити регулярність сну&quot;&lt;br&gt;preferredSleepTime = &quot;23:00&quot;&lt;br&gt;preferredWakeTime = &quot;07:00&quot;" vertex="1">
+          <mxGeometry height="165" width="330" x="420" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_subscription1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;subscription1: Subscription&lt;/u&gt;&lt;hr&gt;id = &quot;s-001&quot;&lt;br&gt;planType = PREMIUM&lt;br&gt;status = ACTIVE&lt;br&gt;expiresAt = &quot;2026-06-20&quot;" vertex="1">
+          <mxGeometry height="145" width="300" x="830" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_notification1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;notificationSettings1: NotificationSettings&lt;/u&gt;&lt;hr&gt;id = &quot;n-001&quot;&lt;br&gt;pushEnabled = true&lt;br&gt;reminderTime = &quot;22:30&quot;&lt;br&gt;smartRemindersEnabled = true" vertex="1">
+          <mxGeometry height="150" width="320" x="1200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_sleepRecord1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;sleepRecord1: SleepRecord&lt;/u&gt;&lt;hr&gt;id = &quot;sr-001&quot;&lt;br&gt;sleepDate = &quot;2026-05-20&quot;&lt;br&gt;sleepStart = &quot;2026-05-19 23:45&quot;&lt;br&gt;sleepEnd = &quot;2026-05-20 06:40&quot;&lt;br&gt;durationMinutes = 415&lt;br&gt;sleepEfficiency = 0.86" vertex="1">
+          <mxGeometry height="210" width="340" x="80" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_factor1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;factor1: SleepFactor&lt;/u&gt;&lt;hr&gt;id = &quot;f-001&quot;&lt;br&gt;caffeine = true&lt;br&gt;stressLevel = 7&lt;br&gt;screenTimeMinutes = 90&lt;br&gt;physicalActivityMinutes = 30" vertex="1">
+          <mxGeometry height="175" width="320" x="500" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_metric1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;metric1: SleepMetric&lt;/u&gt;&lt;hr&gt;id = &quot;m-001&quot;&lt;br&gt;regularityScore = 0.62&lt;br&gt;sleepDebtMinutes = 65&lt;br&gt;qualityScore = 72.5&lt;br&gt;efficiencyScore = 86.0" vertex="1">
+          <mxGeometry height="175" width="320" x="900" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_aiReport1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;aiReport1: AIReport&lt;/u&gt;&lt;hr&gt;id = &quot;r-001&quot;&lt;br&gt;periodStart = &quot;2026-05-13&quot;&lt;br&gt;periodEnd = &quot;2026-05-20&quot;&lt;br&gt;summary = &quot;Якість сну знизилась через нерегулярний режим та стрес&quot;" vertex="1">
+          <mxGeometry height="165" width="430" x="80" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_recommendation1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;recommendation1: Recommendation&lt;/u&gt;&lt;hr&gt;id = &quot;rec-001&quot;&lt;br&gt;title = &quot;Зменшити екранний час&quot;&lt;br&gt;description = &quot;Не використовувати телефон за 60 хвилин до сну&quot;&lt;br&gt;type = HABIT&lt;br&gt;priority = 1" vertex="1">
+          <mxGeometry height="185" width="410" x="610" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_risk1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;align=left;verticalAlign=top;spacing=6;" value="&lt;u&gt;risk1: RiskIndicator&lt;/u&gt;&lt;hr&gt;id = &quot;risk-001&quot;&lt;br&gt;riskType = &quot;Нерегулярний режим&quot;&lt;br&gt;level = MEDIUM&lt;br&gt;description = &quot;Час засинання змінюється більше ніж на 1 годину&quot;" vertex="1">
+          <mxGeometry height="165" width="380" x="1110" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_edge_0" edge="1" parent="1" source="obj_user1" style="endArrow=none;html=1;rounded=0;" target="obj_profile1" value="has">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_edge_1" edge="1" parent="1" source="obj_user1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_subscription1" value="has">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="270" />
+              <mxPoint x="980" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obj_edge_2" edge="1" parent="1" source="obj_user1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_notification1" value="has">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="320" />
+              <mxPoint x="1360" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obj_edge_3" edge="1" parent="1" source="obj_user1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_sleepRecord1" value="creates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_edge_4" edge="1" parent="1" source="obj_sleepRecord1" style="endArrow=none;html=1;rounded=0;" target="obj_factor1" value="contains">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_edge_5" edge="1" parent="1" source="obj_sleepRecord1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_metric1" value="calculated as">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="610" />
+              <mxPoint x="1060" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obj_edge_6" edge="1" parent="1" source="obj_user1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_aiReport1" value="receives">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="290" />
+              <mxPoint x="460" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obj_edge_7" edge="1" parent="1" source="obj_aiReport1" style="endArrow=none;html=1;rounded=0;" target="obj_recommendation1" value="includes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_edge_8" edge="1" parent="1" source="obj_aiReport1" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="obj_risk1" value="includes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="670" />
+              <mxPoint x="1300" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obj_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;Ситуация:&lt;/b&gt;&lt;br&gt;Пользователь Anna имеет Premium-подписку, добавила запись сна за 20.05.2026. Система рассчитала метрики, AI сформировал отчёт, рекомендацию и индикатор риска." vertex="1">
+          <mxGeometry height="180" width="330" x="1250" y="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
