@@ -6,7 +6,6 @@ public static class DbInitializer
 {
     public static void Initialize(AppDbContext context)
     {
-        // Якщо користувачі вже є — нічого не робимо
         if (context.Users.Any()) return;
 
         var user = new User

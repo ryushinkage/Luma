@@ -1,13 +1,13 @@
 using System;
-using System.Collections.Generic; // Потрібно для ICollection
-
-namespace Luma.Api.Models // Твій namespace може трохи відрізнятися
+using System.Collections.Generic; 
+namespace Luma.Api.Models 
 {
     public class User
     {
         public Guid Id { get; set; }
         public string Email { get; set; }
         public string DisplayName { get; set; }
+        public string PasswordHash { get; set; }
         public DateTime CreatedAtUtc { get; set; }
         public string Role { get; set; } = "User";
         public ICollection<SleepRecord> SleepRecords { get; set; } = new List<SleepRecord>();
