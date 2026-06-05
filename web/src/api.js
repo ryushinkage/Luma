@@ -23,7 +23,7 @@
 
 const API_BASE =
   import.meta.env.VITE_API_BASE_URL ??
-  "https://thermal-math-anywhere.ngrok-free.dev";
+  "https://natural-wonder-production-3777.up.railway.app";
 
 let authToken = null;
 
@@ -55,6 +55,27 @@ export function getUserIdFromToken(token = authToken) {
   } catch {
     return null;
   }
+}
+
+/** Достаёт роль из JWT (claim role). Возвращает "Admin" / "User" / null. */
+export function getRoleFromToken(token = authToken) {
+  if (!token) return null;
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return (
+      payload.role ||
+      payload[
+        "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
+      ] ||
+      null
+    );
+  } catch {
+    return null;
+  }
+}
+
+export function isAdmin(token = authToken) {
+  return getRoleFromToken(token) === "Admin";
 }
 
 /** Базовый запрос. Кидает Error с .status и .body при не-2xx. */
@@ -210,4 +231,69 @@ export const users = {
   },
 };
 
-export default { auth, sleepRecords, userProfiles, entries, users, setToken, getToken, clearToken, getUserIdFromToken };
+/* ------------- ADMIN ------------- */
+/* Все эндпоинты требуют JWT с ролью Admin. */
+
+export const admin = {
+  /** Список пользователей с пагинацией и поиском. */
+  listUsers({ page = 1, pageSize = 20, search = "" } = {}) {
+    const q = new URLSearchParams({ page, pageSize });
+    if (search) q.set("search", search);
+    return request(`/api/admin/users?${q.toString()}`, { auth: true });
+  },
+
+  getUser(id) {
+    return request(`/api/admin/users/${id}`, { auth: true });
+  },
+
+  /** data: { email, displayName, role } */
+  updateUser(id, data) {
+    return request(`/api/admin/users/${id}`, {
+      method: "PUT",
+      auth: true,
+      body: data,
+    });
+  },
+
+  deleteUser(id) {
+    return request(`/api/admin/users/${id}`, {
+      method: "DELETE",
+      auth: true,
+    });
+  },
+
+  /** Блокировка/разблокировка: isActive true|false */
+  setStatus(id, isActive) {
+    return request(`/api/admin/users/${id}/status`, {
+      method: "PATCH",
+      auth: true,
+      body: { isActive },
+    });
+  },
+
+  /** Смена роли: "Admin" | "User" */
+  setRole(id, role) {
+    return request(`/api/admin/users/${id}/role`, {
+      method: "PATCH",
+      auth: true,
+      body: { role },
+    });
+  },
+
+  resetPassword(id) {
+    return request(`/api/admin/users/${id}/reset-password`, {
+      method: "POST",
+      auth: true,
+    });
+  },
+
+  stats() {
+    return request("/api/admin/stats", { auth: true });
+  },
+
+  userSleepRecords(id) {
+    return request(`/api/admin/users/${id}/sleep-records`, { auth: true });
+  },
+};
+
+export default { auth, sleepRecords, userProfiles, entries, users, admin, setToken, getToken, clearToken, getUserIdFromToken, getRoleFromToken, isAdmin };
