@@ -4,10 +4,10 @@ using Luma.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;    
+using Microsoft.IdentityModel.Tokens;
 using System;
-using System.IdentityModel.Tokens.Jwt;   
-using System.Security.Claims;           
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +18,8 @@ namespace Luma.Api.Controllers
     public class AuthController : ControllerBase
     {
         private readonly AppDbContext _context;
-        private readonly IConfiguration _configuration; 
+        private readonly IConfiguration _configuration;
+
         public AuthController(AppDbContext context, IConfiguration configuration)
         {
             _context = context;
@@ -39,7 +40,12 @@ namespace Luma.Api.Controllers
             {
                 Id = Guid.NewGuid(),
                 Email = dto.Email.ToLower(),
-                DisplayName = dto.DisplayName,
+
+                // ВИПРАВЛЕНО: Якщо Сава не прислав ім'я, беремо шматок емейлу до знака '@'
+                DisplayName = !string.IsNullOrEmpty(dto.DisplayName)
+                    ? dto.DisplayName
+                    : dto.Email.Split('@')[0],
+
                 PasswordHash = passwordHash,
                 CreatedAtUtc = DateTime.UtcNow,
                 Role = "User"
@@ -71,7 +77,9 @@ namespace Luma.Api.Controllers
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role),
-                new Claim("displayName", user.DisplayName)
+                
+                // ВИПРАВЛЕНО: Захист від Null, якщо в базі раптом лежить порожнє ім'я
+                new Claim("displayName", user.DisplayName ?? user.Email.Split('@')[0])
             };
 
             var secretKey = _configuration["JwtSettings:Secret"];

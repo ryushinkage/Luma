@@ -15,5 +15,6 @@ namespace Luma.Api.Models
         public NotificationSettings NotificationSettings { get; set; }
         public Subscription Subscription { get; set; }
         public ICollection<AIReport> AIReports { get; set; } = new List<AIReport>();
+        public ICollection<JournalEntry> JournalEntries { get; set; } = new List<JournalEntry>();
     }
 }

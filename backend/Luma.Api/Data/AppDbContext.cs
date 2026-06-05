@@ -18,8 +18,9 @@ public class AppDbContext : DbContext
     public DbSet<AIReport> AIReports => Set<AIReport>();
     public DbSet<Recommendation> Recommendations => Set<Recommendation>();
     public DbSet<RiskIndicator> RiskIndicators => Set<RiskIndicator>();
-
     public DbSet<RecommendationRule> RecommendationRules => Set<RecommendationRule>();
+    public DbSet<FriendshipRequest> FriendshipRequests { get; set; }
+    public DbSet<Friendship> Friendships { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -28,12 +29,19 @@ public class AppDbContext : DbContext
             e.HasKey(x => x.Id);
             e.HasIndex(x => x.Email).IsUnique();
             e.Property(x => x.Email).IsRequired().HasMaxLength(320);
-            e.Property(x => x.DisplayName).IsRequired().HasMaxLength(200);
+
+            // ÇÐÎÁÈËÈ ÍÅÎÁÎÂ'ßÇÊÎÂÈÌ (ïðèáðàëè .IsRequired())
+            e.Property(x => x.DisplayName).HasMaxLength(200);
+
             e.Property(x => x.Role).IsRequired().HasMaxLength(50);
             e.Property(x => x.PasswordHash).IsRequired().HasMaxLength(500);
 
+            // Íàëàøòóâàííÿ çâ'ÿçê³â êîðèñòóâà÷à
             e.HasMany(x => x.SleepRecords).WithOne(s => s.User).HasForeignKey(s => s.UserId).OnDelete(DeleteBehavior.Cascade);
-            e.HasMany(x => x.SleepRecords).WithOne(s => s.User).HasForeignKey(s => s.UserId).OnDelete(DeleteBehavior.Cascade);
+
+            // ÇÀÌ²ÍÈËÈ ÄÓÁËÜ ÍÀ ÇÂ'ßÇÎÊ Ç² ÙÎÄÅÍÍÈÊÎÌ:
+            e.HasMany(x => x.JournalEntries).WithOne(j => j.User).HasForeignKey(j => j.UserId).OnDelete(DeleteBehavior.Cascade);
+
             e.HasOne(x => x.Profile).WithOne(p => p.User).HasForeignKey<UserProfile>(p => p.UserId).OnDelete(DeleteBehavior.Cascade);
             e.HasOne(x => x.NotificationSettings).WithOne(n => n.User).HasForeignKey<NotificationSettings>(n => n.UserId).OnDelete(DeleteBehavior.Cascade);
             e.HasOne(x => x.Subscription).WithOne(s => s.User).HasForeignKey<Subscription>(s => s.UserId).OnDelete(DeleteBehavior.Cascade);
@@ -70,6 +78,7 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<AIReport>(e =>
         {
+            // Çâ'ÿçîê AIReport ç User (îïö³îíàëüíî, ÿêùî EF ñâàðèòüñÿ, àëå ïîêè çàëèøàºìî ÿê ó òåáå)
             e.HasKey(x => x.Id);
             e.HasMany(x => x.Recommendations).WithOne(r => r.Report).HasForeignKey(r => r.ReportId).OnDelete(DeleteBehavior.Cascade);
             e.HasMany(x => x.RiskIndicators).WithOne(ri => ri.Report).HasForeignKey(ri => ri.ReportId).OnDelete(DeleteBehavior.Cascade);
@@ -77,7 +86,6 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<Recommendation>(e => { e.HasKey(x => x.Id); e.Property(x => x.Type).HasConversion<string>(); });
         modelBuilder.Entity<RiskIndicator>(e => { e.HasKey(x => x.Id); e.Property(x => x.Level).HasConversion<string>(); });
-
 
         modelBuilder.Entity<RecommendationRule>(e => { e.HasKey(x => x.Id); });
     }
