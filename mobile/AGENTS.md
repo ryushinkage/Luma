@@ -220,4 +220,31 @@ Use clear English names:
 - SubscriptionPlan
 - UserProfile
 
+## Обязательные правила для Codex
+
+1. Перед любой задачей по проекту сначала прочитать файлы из `docs/context`.
+2. Не считать продукт обычным sleep tracker. Это AI-driven sleep analytics / sleep-coaching платформа.
+3. Не придумывать стек, роли, платежи, AI-функции или сущности, если они уже описаны в документах.
+4. Если задача касается мобильного приложения — сначала читать:
+   - `docs/context/01-product-overview.md`
+   - `docs/context/02-mobile-requirements.md`
+   - `docs/context/05-data-and-analytics.md`
+   - `docs/context/06-ai-assistant-and-premium.md`
+5. Если задача касается backend — сначала читать:
+   - `docs/context/01-product-overview.md`
+   - `docs/context/03-backend-requirements.md`
+   - `docs/context/04-domain-model.md`
+   - `docs/context/05-data-and-analytics.md`
+   - `docs/context/07-business-rules.md`
+6. Если задача касается web — сначала читать:
+   - `docs/context/01-product-overview.md`
+   - `docs/context/02-web-requirements.md`
+   - `docs/context/05-data-and-analytics.md`
+   - `docs/context/06-ai-assistant-and-premium.md`
+7. Если задача касается архитектуры/UML — читать `docs/context/08-diagrams.md` и draw.io файлы в `docs/context/diagrams`.
+8. Не добавлять врачей, консультантов или внешних медицинских специалистов: персональный сопровождатель в проекте — AI-ассистент.
+9. Не позиционировать систему как медицинскую диагностику. Разрешённый формат: мониторинг, индикаторы риска, предупреждения, рекомендации по sleep hygiene и sleep-coaching.
+10. При нехватке информации не выдумывать, а оставить TODO/вопрос.
+
+
 Avoid unclear abbreviations.

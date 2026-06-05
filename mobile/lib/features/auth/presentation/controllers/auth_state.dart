@@ -2,6 +2,9 @@ enum AuthStatus {
   idle,
   loading,
   authenticated,
+  registered,
+  completingOnboarding,
+  onboardingComplete,
   failure,
 }
 
@@ -14,8 +17,14 @@ class AuthState {
   final AuthStatus status;
   final String? errorMessage;
 
-  bool get isLoading => status == AuthStatus.loading;
+  bool get isLoading {
+    return status == AuthStatus.loading ||
+        status == AuthStatus.completingOnboarding;
+  }
+
   bool get isAuthenticated => status == AuthStatus.authenticated;
+  bool get isRegistered => status == AuthStatus.registered;
+  bool get isOnboardingComplete => status == AuthStatus.onboardingComplete;
 
   AuthState copyWith({
     AuthStatus? status,
