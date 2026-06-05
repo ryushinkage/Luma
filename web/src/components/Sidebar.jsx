@@ -1,4 +1,4 @@
-﻿import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
     LayoutDashboard,
     Sparkles,
@@ -9,9 +9,13 @@ import {
     Settings,
     LogOut,
     Moon,
+    Shield,
 } from "lucide-react";
+import { clearToken, isAdmin } from "../api";
 
-export default function Sidebar() {
+export default function Sidebar({ onLogout }) {
+    const navigate = useNavigate();
+
     const menuItems = [
         { title: "Дашборд", path: "/dashboard", icon: LayoutDashboard },
         { title: "ШІ-інсайти", path: "/insights", icon: Sparkles },
@@ -20,6 +24,24 @@ export default function Sidebar() {
         { title: "Звіти", path: "/reports", icon: FileText },
         { title: "Цілі", path: "/goals", icon: Target },
     ];
+
+    // Пункт «Адмінка» показываем только пользователям с ролью Admin
+    if (isAdmin()) {
+        menuItems.push({ title: "Адмінка", path: "/admin", icon: Shield });
+    }
+
+    function handleLogout() {
+        clearToken();          // чистим токен в api-клиенте
+        if (onLogout) onLogout(); // если проп передан напрямую
+        // оповещаем App о выходе (без прокидывания пропов через все страницы)
+        window.dispatchEvent(new Event("auth-logout"));
+        navigate("/", { replace: true }); // на стартовую
+    }
+
+    function handleSettings(e) {
+        // Страницы настроек пока нет — не даём уйти в никуда
+        e.preventDefault();
+    }
 
     return (
         <aside className="sidebar">
@@ -46,12 +68,20 @@ export default function Sidebar() {
             </nav>
 
             <div className="sidebar__bottom">
-                <NavLink to="/settings" className="sidebar__link">
+                <button
+                    type="button"
+                    className="sidebar__link"
+                    onClick={handleSettings}
+                >
                     <Settings size={18} />
                     <span>Налаштування</span>
-                </NavLink>
+                </button>
 
-                <button className="sidebar__link sidebar__logout">
+                <button
+                    type="button"
+                    className="sidebar__link sidebar__logout"
+                    onClick={handleLogout}
+                >
                     <LogOut size={18} />
                     <span>Вийти</span>
                 </button>

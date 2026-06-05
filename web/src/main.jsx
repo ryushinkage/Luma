@@ -7,6 +7,7 @@ import "./styles/global.css";
 import "./styles/layout.css";
 import "./styles/habits.css";
 import "./styles/landing.css";
+import "./styles/dashboard.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>

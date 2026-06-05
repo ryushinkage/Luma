@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Moon, Sparkles, Play, Brain, Activity, Target } from "lucide-react";
 
 export default function Landing() {
@@ -21,8 +21,8 @@ export default function Landing() {
                 </nav>
 
                 <div className="landing-header__actions">
-                    <button className="landing-header__login">Увійти</button>
-                    <Link to="/dashboard" className="landing-header__cta">
+                    <Link to="/login" className="landing-header__login">Увійти</Link>
+                    <Link to="/login" className="landing-header__cta">
                         Спробувати
                     </Link>
                 </div>
@@ -52,7 +52,7 @@ export default function Landing() {
                         </p>
 
                         <div className="hero__actions">
-                            <Link to="/dashboard" className="btn btn--light">
+                            <Link to="/login" className="btn btn--light">
                                 Почати безкоштовно
                             </Link>
 

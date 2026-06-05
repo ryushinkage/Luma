@@ -25,10 +25,25 @@ const API_BASE =
   import.meta.env.VITE_API_BASE_URL ??
   "https://natural-wonder-production-3777.up.railway.app";
 
+const TOKEN_KEY = "luma_token";
+
+// Восстанавливаем токен из localStorage при загрузке приложения,
+// чтобы вход переживал перезагрузку страницы и заход по прямому URL.
 let authToken = null;
+try {
+  authToken = localStorage.getItem(TOKEN_KEY);
+} catch {
+  authToken = null;
+}
 
 export function setToken(token) {
   authToken = token;
+  try {
+    if (token) localStorage.setItem(TOKEN_KEY, token);
+    else localStorage.removeItem(TOKEN_KEY);
+  } catch {
+    /* localStorage недоступен — работаем только в памяти */
+  }
 }
 
 export function getToken() {
@@ -37,6 +52,11 @@ export function getToken() {
 
 export function clearToken() {
   authToken = null;
+  try {
+    localStorage.removeItem(TOKEN_KEY);
+  } catch {
+    /* ignore */
+  }
 }
 
 /** Достаёт userId из JWT (claim NameIdentifier) без внешних библиотек. */
