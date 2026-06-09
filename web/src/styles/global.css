@@ -1,0 +1,23 @@
+:root {
+    --bg-main: #0b1020;
+    --bg-dark: #060816;
+    --bg-card: #141d33;
+    --border: #18243d;
+    --text-main: #f5f7ff;
+    --text-muted: #b7c1d9;
+    --accent-purple: #7c5cff;
+    --accent-blue: #4da8ff;
+    --red: #ff6b7a;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
